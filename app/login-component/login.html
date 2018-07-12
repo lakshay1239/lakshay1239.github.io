@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+    <div ng-app="login" ng-controller="loginCtrl"> 
+        <div id="login">
+            <form action="#home/dashboard">
+                <h2 align="center">Welcome to ToDoApp!</h2>
+                <h4 align="center">Enter Login Credentials</h4>
+                <div><input type = "email" name="email" placeholder="Email" ng-model="email" required></div>
+                <div><input type = "password" name="password" placeholder="Password" ng-model="password" required></div>
+                <button type ="submit" id="submit" ng-click="submit()" value="Sign In">Login</button>
+            </form>
+        </div>
+    </div>

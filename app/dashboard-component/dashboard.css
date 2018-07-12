@@ -1,0 +1,87 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+#pos{
+    position:relative;
+    left:700px;
+}
+
+.container{
+            width: 100%;
+            background-color: #f0f0f0; 
+        }
+        .sidebar{
+            float: left; 
+            width: 20%; 
+            min-height: 170px;
+            background-color: #bbd2df;
+        }
+        .sidebar .nav{
+            padding: 10px;
+        }
+        .nav ul{
+            list-style: none; 
+            padding: 0px; 
+            margin: 0px;
+        }
+        .nav ul li{
+            margin-bottom: 5px; 
+        }
+        .nav ul li a{
+            color: #3d677e;
+        }
+        .nav ul li a:hover{
+            text-decoration: none;
+        }
+        .content{
+            float: left;
+            width: 80%;
+            min-height: 170px;
+        }
+        .content .section{
+            padding: 10px;
+        }
+        .content h2{
+            font-size: 16px; 
+            margin: 0px;
+        }
+        .clearfix{
+            clear: both;
+        }
+
+
+span.a {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid blue;        
+    background-color: rgb(0, 183, 255); 
+}
+
+span.b {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid blue;        
+    background-color: rgb(0, 183, 255); 
+}
+
+.strike {
+    text-decoration: line-through;
+  }
+.deleteTodo{
+    display: none;
+}
+.todoItem:hover .deleteTodo{
+    display: block;
+}

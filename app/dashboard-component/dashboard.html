@@ -1,0 +1,137 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<style>
+    nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 700px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+#pos{
+    position:relative;
+    left:700px;
+}
+
+.container{
+            width: 100%;
+            background-color: #f0f0f0; 
+        }
+        .sidebar{
+            float: left; 
+            width: 35%; 
+            min-height: 452px;
+            background-color: #aec1cc;
+            border: 2px solid #2ECC71;
+        }
+        .sidebar .nav{
+            padding: 20px;
+            
+        }
+        .nav div{
+            /* list-style: none;  */
+            padding: 0px; 
+            margin: 0px;
+            margin-bottom: 5px; 
+            border: 1px solid rgb(58, 56, 56);
+            width: 90%;
+        }
+        .nav div a{
+            color: #3d677e;
+        }
+        .nav div a:hover{
+            text-decoration: none;
+        }
+        .content{
+            float: left;
+            width: 64%;
+            min-height: 170px;
+            /* border: 2px solid grey; */
+        }
+        .content .section{
+            padding: 10px;
+            min-height: 400px;
+            border: 2px solid #2ECC71;
+            background-color: #bbd2df;
+        }
+        .content h2{
+            font-size: 16px; 
+            margin: 0px;
+        }
+        .clearfix{
+            clear: both;
+        }
+
+.strike {
+    text-decoration: line-through;
+  }
+.deleteToDo{
+    display: none;
+}
+.box{
+    background-color: #909ea7;
+}
+
+.box:hover .deleteToDo{
+    display: inline;
+}
+
+</style>
+<br><br>
+<!-- <section> -->
+
+        <div class="wrapper">
+                <div class="sidebar">
+                    <div class="nav">
+                        <form>
+                            <label>To Do Activity:</label><input type="text" id="todoname" style="width:200px;" data-ng-model="itemObj.name" required>
+                                <br>  <br> <br>
+                                <label>Description:</label><br><textarea id="tododesc" style="height:100px; width:300px;" data-ng-model="itemObj.description"></textarea>
+                                <br><button onclick="document.getElementById('todoname').value = ' '; document.getElementById('tododesc').value = ''" type="submit" data-ng-click="addItem()">Add</button><br>
+                                </form><br>
+                                <div class = "box" data-ng-repeat = "itemObj in itemList" ng-click="mouseClick(itemObj)"> 
+                                   <pre ng-class="{strike: deleted}"><input type="checkbox" ng-model="deleted"> {{itemObj.name}}</pre>
+                                   <button onclick="document.getElementById('todoname').value = ''; document.getElementById('tododesc').value = ''" class="deleteToDo" data-ng-click="delete($index)" >Delete</button>   
+                                </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h2 align="center"  style="border: 2px solid #2ECC71; background-color: #bbd2df; padding:5px;">
+                        Description</h2>
+                    <div class="section">
+                        <p>{{data}} </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <!-- 
+    <div>
+        
+            <span class="a"><label>To Do Activity:</label><input type="text" data-ng-model="itemObj.name">
+                <br>  <br> <br>
+                <label>Description:</label><input type="text" data-ng-model="itemObj.description">
+                <button data-ng-click="addItem()">Add</button>
+            <ul>
+                <li data-ng-repeat = "itemObj in itemList" ng-mouseover="mouseOver(itemObj)" ng-mouseleave="mouseLeave()"> 
+                    <p ng-class="{strike: deleted}"><input type="checkbox" ng-model="deleted"> {{itemObj.name}} </p> 
+                    <button data-ng-click="delete($index)" >Delete User</button>
+                </li>
+            </ul></span> 
+                    
+            <span class="b">
+                    <p>{{data}} </p>
+                </span>
+          
+            </div>
+              
+</div>
+     -->
+ 
+  <!-- </section> -->

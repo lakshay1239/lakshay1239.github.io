@@ -1,0 +1,39 @@
+<header>
+    <!-- <ul>
+        <li><button data-ng-click="gotoHome()">{{username|firstLetter|uppercase}}</button></li>
+        <li><button data-ng-click="gotoDashboard()">Dashboard</button></li>
+        <li><button data-ng-click="gotoProfile()">Profile</button></li>
+        <li><button data-ng-click = "logout()">Logout</button></li>
+    </ul> -->
+
+
+    <div class="navbar">
+        <a href="#home/dashboard">Home</a>
+        <!-- <div class="dropdown">
+          <button class="dropbtn">{{username | firstLetter | uppercase}} 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+                <a data-ng-click="gotoHome()">{{username}}</a>
+                <a data-ng-click="gotoDashboard()">Dashboard</a>
+                <a data-ng-click="gotoProfile()">Profile</button></a>
+                <a data-ng-click = "logout()">Logout</a>
+            <div data-ui-view=""></div>     
+          </div>
+        </div> -->
+        
+        <div class="dropdown" style="float:right">
+                <button class="dropbtn" style="width:50px">{{email | firstLetter | uppercase}} 
+                </button>
+                <div class="dropdown-content">
+                  <a>{{email}}</a>
+                  <a  data-ng-click="gotoDashboard()">Dashboard</a>
+                  <a  data-ng-click="gotoProfile()">Profile</a>
+                  <a  data-ng-click="logout()">Logout</a>
+                </div>
+              </div>
+      </div>
+</header>
+<main>
+    <ui-view></ui-view>
+</main>
