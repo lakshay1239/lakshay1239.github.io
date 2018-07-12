@@ -34,12 +34,11 @@ font-family: Arial, Helvetica, sans-serif;
             
         }
         .nav div{
-            /* list-style: none;  */
-            padding: 0px; 
             margin: 0px;
             margin-bottom: 5px; 
             border: 1px solid rgb(58, 56, 56);
             width: 90%;
+            padding: 10px;
         }
         .nav div a{
             color: #3d677e;
@@ -69,16 +68,21 @@ font-family: Arial, Helvetica, sans-serif;
 
 .strike {
     text-decoration: line-through;
+    width:70%;
   }
 .deleteToDo{
     display: none;
+    float: right;
 }
 .box{
     background-color: #909ea7;
 }
-
+.todoName{
+    margin: 0;
+    display: inline-block;
+}
 .box:hover .deleteToDo{
-    display: inline;
+    display: inline-block;
 }
 
 </style>
@@ -95,8 +99,8 @@ font-family: Arial, Helvetica, sans-serif;
                                 <br><button onclick="document.getElementById('todoname').value = ' '; document.getElementById('tododesc').value = ''" type="submit" data-ng-click="addItem()">Add</button><br>
                                 </form><br>
                                 <div class = "box" data-ng-repeat = "itemObj in itemList" ng-click="mouseClick(itemObj)"> 
-                                   <pre ng-class="{strike: deleted}"><input type="checkbox" ng-model="deleted"> {{itemObj.name}}</pre>
-                                   <button onclick="document.getElementById('todoname').value = ''; document.getElementById('tododesc').value = ''" class="deleteToDo" data-ng-click="delete($index)" >Delete</button>   
+                                   <pre class = "todoName" ng-class="{strike: deleted}" style="width:70%;"><input type="checkbox" ng-model="deleted"> {{itemObj.name}}</pre>
+                                   <button onclick="document.getElementById('todoname').value = ''; document.getElementById('tododesc').value = ''" class="deleteToDo" data-ng-click="delete($index)">Delete</button>   
                                 </div>
                     </div>
                 </div>
